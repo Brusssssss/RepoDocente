@@ -17,17 +17,11 @@ app.get('/docentes', (req, res) => {
   });
 });
 
-// Ruta para actualizar los datos
+// Ruta para actualizar los datos de los docentes (PUT)
 app.put('/docentes', (req, res) => {
-  const updatedDocentes = req.body;
-
-  // Guarda los datos actualizados en el archivo JSON
-  fs.writeFile(path.join(__dirname, 'docentes.json'), JSON.stringify(updatedDocentes, null, 2), (err) => {
-    if (err) {
-      return res.status(500).json({ message: 'Error al actualizar el archivo JSON' });
-    }
-    res.status(200).json({ message: 'Datos actualizados correctamente' });
-  });
+  const updatedDocente = req.body; // Los datos del docente que se actualizarán
+  docentes[0] = updatedDocente; // Actualizamos el primer docente (puedes adaptar este código para múltiples docentes)
+  res.status(200).json(updatedDocente); // Respondemos con los datos actualizados
 });
 
 const PORT = process.env.PORT || 10000;
