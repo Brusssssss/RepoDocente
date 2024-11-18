@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 // Ruta para obtener los datos
-app.get('/docentes', (req, res) => {
+app.get('https://repodocente.onrender.com', (req, res) => {
   fs.readFile('./docente.json', 'utf8', (err, data) => {
     if (err) {
       return res.status(500).json({ message: 'Error al leer el archivo JSON' });
@@ -18,7 +18,7 @@ app.get('/docentes', (req, res) => {
 });
 
 // Ruta para actualizar el perfil
-app.put('/docentes', (req, res) => {
+app.put('https://repodocente.onrender.com', (req, res) => {
   const newData = req.body;
 
   fs.writeFile('./docente.json', JSON.stringify(newData, null, 2), 'utf8', (err) => {
