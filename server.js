@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 // Ruta para obtener los datos
-app.get('https://repodocente.onrender.com', (req, res) => {
+app.get('https://repodocente.onrender.com/docentes/${id}', (req, res) => {
   fs.readFile(path.join(__dirname, 'docentes.json'), 'utf-8', (err, data) => {
     if (err) {
       return res.status(500).json({ message: 'Error al leer el archivo JSON' });
@@ -18,7 +18,7 @@ app.get('https://repodocente.onrender.com', (req, res) => {
 });
 
 // Ruta para actualizar los datos de los docentes (PUT)
-app.put('https://repodocente.onrender.com', (req, res) => {
+app.put('https://repodocente.onrender.com/docentes/${id}', (req, res) => {
   const updatedDocente = req.body; // Los datos del docente que se actualizarán
   docentes[0] = updatedDocente; // Actualizamos el primer docente (puedes adaptar este código para múltiples docentes)
   res.status(200).json(updatedDocente); // Respondemos con los datos actualizados
