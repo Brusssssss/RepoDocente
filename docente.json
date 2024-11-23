@@ -7,6 +7,14 @@
             "email":"joseluis@gmail.com",
             "password":"joseluis",
             "isactive": true
+        },
+        {
+            "id":"2",
+            "nombre":"Anastasio Molina",
+            "rut":"12234432-6",
+            "email":"joseluis@gmail.com",
+            "password":"anastasio",
+            "isactive": true
         }
     ]
 }
