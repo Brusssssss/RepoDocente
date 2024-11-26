@@ -1,0 +1,36 @@
+{
+    "docentes":[
+        {
+            "id":"1",
+            "nombre":"Viviana Poblete",
+            "rut":"12234432-6",
+            "email":"vivianalduocuc.cl",
+            "password":"viviana",
+            "isactive": true
+        },
+        {
+            "id":"2",
+            "nombre":"Gonzalo Rosende",
+            "rut":"15234678-4",
+            "email":"gonzalor@gmail.com",
+            "password":"gonzalo",
+            "isactive": true
+        },
+        {
+            "id":"3",
+            "nombre":"Isidora Jorquiera",
+            "rut":"15423678-2",
+            "email":"isidoraj@gmail.com",
+            "password":"isidora",
+            "isactive": true
+        },
+        {
+            "id":"4",
+            "nombre":"Daniel Montero",
+            "rut":"18633124-7",
+            "email":"danielm@gmail.com",
+            "password":"daniel",
+            "isactive": true
+        }
+    ]
+}
